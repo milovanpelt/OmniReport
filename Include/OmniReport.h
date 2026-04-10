@@ -6,4 +6,3 @@
 	#define OMNIREPORT_API __declspec(dllimport)
 #endif // OMNIREPORT_EXPORTS
 
-
