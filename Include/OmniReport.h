@@ -6,4 +6,4 @@
 	#define OMNIREPORT_API __declspec(dllimport)
 #endif // OMNIREPORT_EXPORTS
 
-
+extern "C" OMNIREPORT_API void PrintTestMessage(char* message);
