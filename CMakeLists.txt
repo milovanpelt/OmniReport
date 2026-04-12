@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.15)
 project(OmniReport VERSION 0.1 LANGUAGES CXX)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # add C++ libcpr library for http requests
 include(FetchContent)
 
@@ -18,7 +21,7 @@ set(LIBCURL_ENABLE_PSL OFF CACHE BOOL "" FORCE)
 FetchContent_Declare(
     cpr 
     GIT_REPOSITORY https://github.com/libcpr/cpr.git
-    GIT_TAG 1.10.1
+    GIT_TAG 1.11.0
 )
 
 FetchContent_MakeAvailable(cpr)
@@ -35,8 +38,18 @@ target_include_directories(OmniReport PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Include>
 )
 
-target_link_libraries(OmniReport PRIVATE cpr::cpr)
+target_link_libraries(OmniReport PUBLIC cpr::cpr)
 
 add_executable(ConsoleTest Examples/ConsoleTest/ConsoleTest.cpp)
 
 target_link_libraries(ConsoleTest PRIVATE OmniReport)
+
+# Only run this on Windows
+if(WIN32)
+    add_custom_command(TARGET ConsoleTest POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            $<TARGET_RUNTIME_DLLS:ConsoleTest>
+            $<TARGET_FILE_DIR:ConsoleTest>
+        COMMAND_EXPAND_LISTS
+    )
+endif()
