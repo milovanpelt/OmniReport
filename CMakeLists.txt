@@ -30,6 +30,8 @@ add_library(
     OmniReport SHARED
     Include/OmniReport.h
     Source/OmniReport.cpp
+    Source/DiscordClient.h
+    Source/DiscordClient.cpp
 )
 
 target_compile_definitions(OmniReport PRIVATE OMNIREPORT_EXPORTS)
