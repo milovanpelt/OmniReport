@@ -6,6 +6,7 @@
 
 int main()
 {
+    PrintTestMessage("hello world");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
