@@ -6,7 +6,11 @@
 
 int main()
 {
-    PrintTestMessage("hello world");
+    //OmniReport::LinkCategoryToWebhook("general", "");
+    //OmniReport::LinkCategoryToWebhook("bugs", "");
+
+    //OmniReport::SendMessageToCategory("general", "message in general channel");
+    //OmniReport::SendMessageToCategory("bugs", "message in bugs channel");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

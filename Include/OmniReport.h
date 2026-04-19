@@ -6,4 +6,12 @@
 	#define OMNIREPORT_API __declspec(dllimport)
 #endif // OMNIREPORT_EXPORTS
 
-extern "C" OMNIREPORT_API void PrintTestMessage(char* message);
+namespace OmniReport
+{
+	extern "C"
+	{
+		OMNIREPORT_API bool LinkCategoryToWebhook(const char* category, const char* webhook);
+		OMNIREPORT_API bool SendMessageToCategory(const char* category, const char* message);
+	}
+}
+
