@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="OmniReport.vcxproj" Id="9c0228a1-af25-471b-ad7e-2c06efa1857d" />
+</Solution>
