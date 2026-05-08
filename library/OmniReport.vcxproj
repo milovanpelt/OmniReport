@@ -137,9 +137,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Include\framework.h" />
-    <ClInclude Include="Include\OmniReport.h" />
-    <ClInclude Include="Include\pch.h" />
+    <ClInclude Include="include\framework.h" />
+    <ClInclude Include="include\OmniReport.h" />
+    <ClInclude Include="include\pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp" />
