@@ -3,7 +3,6 @@
 #include "OmniReport.h"
 #include <iostream>
 #include <cpr/cpr.h>
-#include "DiscordClient.h"
 
 static std::map<std::string, std::string> Webhooks;
 
