@@ -32,7 +32,7 @@
     <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\OmniReport\OmniReport.cpp">
+    <ClCompile Include="src\OmniReport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
