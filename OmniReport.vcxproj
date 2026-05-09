@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\OmniReport\OmniReport.h" />
     <ClInclude Include="src\framework.h" />
     <ClInclude Include="src\pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\OmniReport\OmniReport.cpp" />
     <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="src\pch.cpp" />
   </ItemGroup>

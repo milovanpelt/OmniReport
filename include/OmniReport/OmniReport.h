@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef OMNIREPORT_EXPORTS
-#define OMNIREPORT_API __decspec(dllexport)
+#define OMNIREPORT_API __declspec(dllexport)
 #else
-#define OMNIREPORT_API __decspec(dllimport)
+#define OMNIREPORT_API __declspec(dllimport)
 #endif // OMNIREPORT_EXPORTS
 
 namespace OmniReport 
 {
+	extern "C"
+	{
+		OMNIREPORT_API void SendDiscordMessage(char* message);
+	}
 }
